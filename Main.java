@@ -17,7 +17,6 @@ public class Main {
         int values = in.nextInt();
         double[] temps = new double[values];
         double[] tempschart = new double[values];
-        double[] tempstemp = new double[values];
         //läs in värden i arrayn temps[] //
         for (int i = 0; i < values; i++) {
             System.out.print("Ange temperaturvärde " + (i + 1) + ": ");
@@ -28,7 +27,6 @@ public class Main {
             } else {
                 temps[i] = input;
                 tempschart[i] = temps[i];
-                tempstemp[i] = temps[i];
             }
         }
         // lägg till alla värden i totaltemp //
@@ -49,9 +47,6 @@ public class Main {
         }
         // skapar skalan för grafen //
         int[] scale = new int[12];
-        int max = (int) temps[values - 1];
-        int min = (int) temps[0];
-
         for (int i = 0; i < 12; i++) {
             scale[i] = 60 - (i * 10);
         }
