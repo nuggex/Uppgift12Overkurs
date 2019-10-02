@@ -53,11 +53,6 @@ public class Main {
         int min = (int) temps[0];
 
         for (int i = 0; i < 12; i++) {
-            int test = (int) temps[i];
-            int maxmin = max - (i * min);
-            int divider = 12;
-            int mult = -12 - i;
-            //System.out.println("maxmin:"+maxmin +"\nDivider:"+divider);
             scale[i] = 60 - (i * 10);
         }
         // räknar ut inmatade värden till +-6 så de kan skrivas ut i grafen //
