@@ -55,21 +55,6 @@ public class Main {
         for (int i = 0; i < 12; i++) {
             scale[i] = 60 - (i * 10);
         }
-        // räknar ut inmatade värden till +-6 så de kan skrivas ut i grafen //
-        for (int i = 0; temps[values - 1] >= 60 || temps[values - 1] <= -50; i++) {
-            for (int j = 0; j < temps.length; j++) {
-                temps[j] = temps[j] / 2;
-                tempschart[j] = tempschart[j] / 2;
-            }
-        }
-        /*for (double temp : temps) {
-            System.out.println(Math.round(temp));
-        }*/
-        //debugging för vad de olika arrays ger ut //
-       /* for (int i = 0; i < temps.length; i++) {
-            System.out.println(temps[i]);
-            System.out.println(scale[i]);
-        }*/
         //utprinting av en chart //
         for (int i = 0; i < scale.length; i++) {
 
@@ -83,8 +68,6 @@ public class Main {
             // skriver ut en rad i taget med * då värden överskrids //
 
             for (int j = 0; j < tempschart.length; j++) {
-
-
                 if (tempschart[j] >= scale[i]) {
                     System.out.print("  *");
                 } else {
